@@ -6,12 +6,14 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.hotel.rating.dto.RatingDto;
 import com.hotel.rating.entities.Rating;
 import com.hotel.rating.repository.RatingRepo;
 import com.hotel.rating.service.RatingService;
 
+@Service
 public class RatingServiceImpl implements RatingService{
 	
 	@Autowired
