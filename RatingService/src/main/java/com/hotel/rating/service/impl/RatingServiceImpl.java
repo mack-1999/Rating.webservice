@@ -25,8 +25,8 @@ public class RatingServiceImpl implements RatingService{
 	@Override
 	public RatingDto addRating(RatingDto ratingDto) {
 		// Generate & Set random hotel id
-		String randomHotelId = UUID.randomUUID().toString();
-		ratingDto.setRatingId(randomHotelId);
+		String randomRatingId = UUID.randomUUID().toString();
+		ratingDto.setRatingId(randomRatingId);
 		
 		// Converting DTO to entity class
 		Rating ratingData = modelMapper.map(ratingDto, Rating.class);

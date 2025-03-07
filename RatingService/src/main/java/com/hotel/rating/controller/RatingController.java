@@ -16,7 +16,7 @@ import com.hotel.rating.dto.RatingDto;
 import com.hotel.rating.service.RatingService;
 
 @RestController
-@RequestMapping("ratings")
+@RequestMapping("/ratings")
 public class RatingController {
 
 	@Autowired
@@ -41,7 +41,7 @@ public class RatingController {
 	}
 	
 	// Get all ratings by hotelId
-	@GetMapping("/getall/user/{hotelId}")
+	@GetMapping("/getall/hotel/{hotelId}")
 	public ResponseEntity<List<RatingDto>> getAllRatingByHotelId(@PathVariable String hotelId){
 		return ResponseEntity.ok(this.ratingService.getAllByHotelId(hotelId));
 	}
